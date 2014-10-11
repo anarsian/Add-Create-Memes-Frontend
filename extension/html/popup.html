@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meme Master</title>
+  <link rel="stylesheet" type="text/css" href="../css/combo.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <script type='text/javascript' src="../js/jquery-2.1.1.min.js"></script>
+  <script type='text/javascript' src="../js/firebase.js"></script>
+  <script type='text/javascript' src="../js/firebase-simple-login.js"></script>
+  <script type='text/javascript' src='../js/login.js'></script>
+  <script type='text/javascript' src='../js/context.js'></script>
+  <script type='text/javascript' src='../js/ZeroClipboard.min.js'></script>
+</head>
+<body>
+  <!-- Header area for logo and user links. -->
+  <header>
+    <!-- Begin login/search stuff -->
+    <nav id="user_links">
+      <div class="customUserFields">
+        <span id="user_welcome_message"></span>
+        <span id="logout_button">Logout</span>
+      </div>
+        <form class="loginForm">
+          <input id="login_email" type="text" placeholder="email" class="loginField" required autofocus>
+          <input id="login_password" type="password" placeholder="password" class="loginField" required>
+          <input type="button" class="loginField" id="submit_login" value="login">
+          <input type="button" class="loginField" id="cancel_login" value="cancel">
+          <span id="login_button" class="button">Login</span>
+        </form>
+        <form class="searchForm" action=# >
+          <input id="search_box" type="text" class="search-box" size="25" maxlength="25">
+          <label id="search_box_label" for="search_box">
+            <span><img src="../img/searchIcon.png" alt="#"></span>
+          </label>
+          <input type="submit" id="search-submit" />
+        </form>
+    </nav>
+    <!-- End login/search stuff --> 
+  </header>
+  <!-- Links for hot/new/trending. -->
+  <nav class="filterLinks">
+    <a class="filterButtons" id="filter-custAll" href="#">All</a> |
+    <a class="filterButtons" id="filter-cust1" href="#">custom category 1</a> |
+    <a class="filterButtons" id="filter-cust2" href="#">custom category 2</a> | 
+    <a class="filterButtons" id="filter-cust3" href="#">custom category 3</a> | 
+    <a class="filterButtons" id="filter-cust4" href="#">custom category 4</a>
+  </nav>
+  <!-- Main content where all the imgs go. -->
+  <main id="meme_gallery">
+  </main>
+  <div id="lightbox_background">
+    <span class="helper"></span>
+    <div class="lightbox">
+      <img id="lightbox_picture" src="#" alt="#">
+      <div id="user_functions_container">
+        <span class="starRating">
+          <input type="radio" name="rating" value="1"><i></i>
+          <input type="radio" name="rating" value="2"><i></i>
+          <input type="radio" name="rating" value="3"><i></i>
+          <input type="radio" name="rating" value="4"><i></i>
+          <input type="radio" name="rating" value="5"><i></i>
+        </span>
+        <form id="comment_form">
+          <textarea name="commentBox" placeholder="notes" id="comment_box"></textarea>
+          <input id="comment_submit_button" type="button" value="save comment">
+          <input type="button" class="pictureFunctionButtons" id="copy_link_button" value="link">
+          <input type="button" class="pictureFunctionButtons" id="copy_pic_button" value="copy image">
+          <a href="#" class="pictureFunctionButtons" id="save_pic_button">save to computer</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Begin registration form -->
+  <div id="registration_background">
+    <span class="helper"></span>
+    <form id="registration_form">
+      <fieldset>
+        <input id="registration_email" type="text" placeholder="email" required>
+        <input id="registration_username" type="text" placeholder="username" required>
+        <input id="registration_password" type="password"  placeholder="password" required>
+        <input id="sign_up_button" type="submit" value="SIGN UP">
+      </fieldset>
+    </form>
+  </div>
+  <!-- End registration form. -->
+</body>
+</html>

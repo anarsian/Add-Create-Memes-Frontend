@@ -1,0 +1,24 @@
+{
+  "name": "Memebase Extension",
+  "description": "Context Menu to add images and Button to go to site",
+  "version": "0.8",
+  "permissions": [
+  		"contextMenus",
+      "cookies",
+      "http://example.com/",
+  		"http://secure.flickr.com/"],
+  "background": {
+    "persistent": false,
+    "scripts": ["js/jquery-2.1.1.min.js", "js/firebase.js", "js/firebase-simple-login.js", "js/context.js"]
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com https://*.firebaseio-demo.com; object-src 'self'",
+  "browser_action": {
+    "default_icon": "img/logo.png",
+    "default_popup": "html/popup.html"},
+  "icons": {
+    "16": "img/logo16.png",
+    "48": "img/logo48.png",
+    "128": "img/logo128.png"
+	}
+}

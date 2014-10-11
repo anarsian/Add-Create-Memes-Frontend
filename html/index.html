@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Meme Master</title>
+	<link rel="stylesheet" type="text/css" href="../css/combo.css">
+	<script type='text/javascript' src="../js/jquery-2.1.1.min.js"></script>
+	<script type='text/javascript' src="../js/firebase.js"></script>
+	<script type='text/javascript' src="../js/firebase-simple-login.js"></script>
+	<script type='text/javascript' src='../js/ZeroClipboard.min.js'></script>
+	<script type='text/javascript' src='../js/combo.js'></script>
+</head>
+<body>
+	<!-- Header area for logo and user links. -->
+	<header>
+		<!-- Logo -->
+		<a href="index.html"><img src="../images/logo.png" id="logo" alt="logo"></a>
+		
+		<!-- Begin login/search stuff -->
+		<nav id="user_links">
+			<div class="customUserFields">
+				<span id="user_welcome_message"></span>
+				<span id="logout_button">Logout</span>
+			</div>
+		    <form class="loginForm">
+		    	<input id="login_email" type="text" placeholder="email" class="loginField" required autofocus>
+		    	<input id="login_password" type="password" placeholder="password" class="loginField" required>
+		    	<input type="button" class="loginField" id="submit_login" value="login">
+		    	<input type="button" class="loginField" id="cancel_login" value="cancel">
+		    	<span id="login_button" class="button">Login</span>
+		    	<span id="register_button" class="button">Sign Up</span>
+		    </form>
+		    <form class="searchForm">
+		    	<input id="search_box" type="text" class="search-box" size="25" maxlength="25">
+		    	<label id="search_box_label" for="search_box">
+		    		<span><img src="../images/searchIcon.png" alt="#"></span>
+		    	</label>
+		    	<input type="submit" id="search-submit" />
+		    </form>
+		</nav>
+		<!-- End login/search stuff -->	
+	</header>
+	<!-- Links for all/trending/top/new. -->
+	<nav class="filterLinks">
+		<a class="filterButtons" id="filter-all" href="#">All</a> |
+		<a class="filterButtons" id="filter-trending" href="#">Trending</a> | 
+		<a class="filterButtons" id="filter-top" href="#">Top</a> | 
+		<a class="filterButtons" id="filter-new" href="#">New</a>
+	</nav>
+	<!-- Main content where all the imgs go. -->
+	<main id="meme_gallery">
+
+	</main>
+
+	<!-- Begin lightbox elements -->
+	<div id="lightbox_background">
+		<span class="helper"></span>
+		<div class="lightbox">
+			<div id="title_container">
+				<span id="img_title"></span>
+			</div>
+			<div id="pic_and_tag_container">
+				<img id="lightbox_picture" src="#" alt="#">
+				<div id="tag_container">
+				</div>
+			</div>
+			<div id="user_functions_container">
+				<span class="starRating">
+					<input id="star1" type="radio" name="rating" value="1"> <i></i>
+					<input id="star2" type="radio" name="rating" value="2"> <i></i>
+					<input id="star3" type="radio" name="rating" value="3"> <i></i>
+					<input id="star4" type="radio" name="rating" value="4"> <i></i>
+					<input id="star5" type="radio" name="rating" value="5"> <i></i>
+				</span>
+				<form id="comment_form">
+					<textarea name="commentBox" placeholder="notes" id="comment_box"></textarea>
+					<input id="comment_submit_button" type="button" class="pictureFunctionButtons" value="save comment">
+					<input type="button" class="pictureFunctionButtons" id="copy_link_button" value="link" data-clipboard-text="">
+					<input type="button" class="pictureFunctionButtons" id="copy_pic_button" value="copy image">
+					<a href="#" class="pictureFunctionButtons" id="save_pic_button">save to computer</a>
+					<input type="button" class="pictureFunctionButtons" id="add_to_collection_button" value="save to collection">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- End lightbox elements -->
+	
+	<!-- Begin sidebar elements -->
+	<nav id="sidebar">
+	    <ul class="sidebar_menu">
+	        <li class="sidebar_menu_item is-active">
+	            <a href="index.html" class="sidebar_button">Find Memes</a>
+	        </li>
+	        <li class="sidebar_menu_item">
+	            <a href="myMemes.html" class="sidebar_button">My Memes</a>
+	        </li>
+	        <li class="sidebar_menu_item">
+	            <a href="CreateMemes.html" class="sidebar_button">Create Memes</a>
+	        </li>
+	    </ul>
+	</nav>
+	<!-- End sidebar elements -->
+	
+	<!-- Begin registration form -->
+	<div id="registration_background">
+		<span class="helper"></span>
+		<form id="registration_form">
+			<fieldset>
+				<span class="registration_icons" id="email_icon"></span>
+				<input id="registration_email" type="text" placeholder="email" required>
+				<span class="registration_icons" id="user_icon"></span>
+				<input id="registration_username" type="text" placeholder="username" required>
+				<span class="registration_icons" id="lock_icon"></span>
+				<input id="registration_password" type="password"  placeholder="password" required>
+				<input id="sign_up_button" type="submit" value="SIGN UP">
+			</fieldset>
+		</form>
+	</div>
+	<!-- End registration form. -->
+</body>
+</html>

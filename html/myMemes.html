@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Memes</title>
+	<link rel="stylesheet" type="text/css" href="../css/combo.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type='text/javascript' src='../js/login.js'></script>
+	<script type='text/javascript' src='../js/sidebar.js'></script>
+	<script type='text/javascript' src='../js/lightbox.js'></script>
+	<script type='text/javascript' src='../js/filter.js'></script>
+	<script type="text/javascript" src="../js/saveEditScript.js"></script>
+</head>
+<body>
+	<!-- Header area for logo and user links. -->
+	<header>
+		<!-- Logo -->
+		<a href="index.html"><img src="../images/logo.png" id="logo" alt="logo"></a>
+		<!-- User links -->
+		<!-- <ol class="breadcrumb">
+		    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+		        <a href="#" itemprop="url">
+		            <span itemprop="title">All</span>
+		        </a>
+		    </li>
+		    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+				<span class='nav_sep'>&rarr;</span>
+		        <a href="#" itemprop="url">
+		            <span itemprop="title">Workplace</span>
+		        </a>
+		    </li>  
+		    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+				<span class='nav_sep'>&rarr;</span>
+		        <a href="#" itemprop="url">
+		            <span itemprop="title">NSFW!!!</span>
+		        </a>
+		    </li>
+		</ol> -->
+		
+		<!-- Begin login/search stuff -->
+		<nav id="user_links">
+		    <form class="loginForm">
+		    	<input type="text" placeholder="username" class="loginField">
+		    	<input type="password" placeholder="password" class="loginField">
+		    	<input type="button" class="loginField" id="submit_login" value="login">
+		    	<a href="#" id="login_button" class="button">Login</a>
+		    	<a href="register.html" id="register_button" class="button">Sign Up</a>
+		    </form>
+		    <form class="searchForm" action="search.html" >
+		    	<input id="search_box" type="text" class="search-box">
+		    	<label id="search_box_label" for="search_box">
+		    		<span><img src="../images/searchIcon.png" alt="#"></span>
+		    	</label>
+		    	<input type="submit" id="search-submit" />
+		    </form>
+		</nav>
+		<!-- End login/search stuff -->	
+	</header>
+	<!-- Links for hot/new/trending. -->
+	<nav class="filterLinks">
+		<a class="filterButtons" id="filter-custAll" href="#">All</a> |
+		<a class="filterButtons" id="filter-cust1" href="#">custom category 1</a> |
+		<a class="filterButtons" id="filter-cust2" href="#">custom category 2</a> | 
+		<a class="filterButtons" id="filter-cust3" href="#">custom category 3</a> | 
+		<a class="filterButtons" id="filter-cust4" href="#">custom category 4</a>
+	</nav>
+	<script type='text/javascript' src='../js/filter.js'></script>
+	<!-- Main content where all the imgs go. -->
+	<main id="meme_gallery">
+		<!-- <div class="imgFrame lightboxLink border is-cust1" data-img="../images/gifs/z8Bu8FZ.gif">	
+		</div>
+		<div class="imgFrame lightboxLink border is-cust2" data-img="../images/gifs/tumblr_mkoso4VJW01roly9io1_500.gif">	
+		</div>
+		<div class="imgFrame lightboxLink border is-cust3" data-img="../images/gifs/tumblr_mk4ug4g6Ze1s9q28do1_500.gif">	
+		</div>
+		<div class="imgFrame lightboxLink border is-cust4" data-img="../images/gifs/tumblr_n1jtbn3T9j1re7e0fo3_500.gif">	
+		</div> -->
+	</main>
+	<div id="lightbox_background">
+		<span class="helper"></span>
+		<div class="lightbox">
+			<img id="lightbox_picture" src="#" alt="#">
+			<div id="user_functions_container">
+				<span class="starRating">
+					<input type="radio" name="rating" value="1"><i></i>
+					<input type="radio" name="rating" value="2"><i></i>
+					<input type="radio" name="rating" value="3"><i></i>
+					<input type="radio" name="rating" value="4"><i></i>
+					<input type="radio" name="rating" value="5"><i></i>
+				</span>
+				<form id="comment_form">
+					<textarea name="commentBox" placeholder="notes" id="comment_box"></textarea>
+					<input id="comment_submit_button" type="button" value="save comment">
+					<input type="button" class="pictureFunctionButtons" id="copy_link_button" value="link">
+					<input type="button" class="pictureFunctionButtons" id="copy_pic_button" value="copy image">
+					<input type="button" class="pictureFunctionButtons" id="save_pic_button" value="save">
+				</form>
+			</div>
+		</div>
+	</div>
+	<nav id="sidebar">
+	    <ul class="sidebar_menu">
+	        <li class="sidebar_menu_item is-active">
+	            <a href="index.html" class="sidebar_button">Find Memes</a>
+	        </li>
+	        <li class="sidebar_menu_item">
+	            <a href="myMemes.html" class="sidebar_button">My Memes</a>
+	        </li>
+	        <li class="sidebar_menu_item">
+	            <a href="CreateMemes.html" class="sidebar_button">Create Memes</a>
+	        </li>
+	    </ul>
+	</nav>
+</body>
+</html>
